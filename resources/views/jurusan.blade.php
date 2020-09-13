@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>web program</title>
+    <title>jurusan</title>
   </head>
   <body>
   
@@ -27,7 +27,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-         <a class="nav-link active" href="{{ url('/index') }}">Home </a>
+    <a class="nav-link active" href="{{ url('/index') }}">Home </a>
              <a class="nav-link" href="{{ url('/mahasiswa') }}">mahasiswa</a>
          <a class="nav-link" href="{{ url('/jurusan') }}">jurusan</a>
      </div>

@@ -11,14 +11,9 @@
 |
 */
 
-Route::get('/index', function () {
-    return view('index');
-});
-Route::get('/pariwisata', function () {
-    return view('pariwisata');
-});
-Route::get('/objek', function () {
-    return view('objek');
-});
+Route::get('/index','PagesController@home');
+Route::get('/mahasiswa','PagesController@jurusan');
 
+
+Route::get('/index','JurusanController@index');
 

@@ -8,14 +8,18 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>web program</title>
+    <title>jurusan</title>
+
+    <style>
+    .cart{
+      padding      :10px;
+      margin       :40px;
+      border-radius:15px;
+    }
+    </style>
   </head>
   <body>
   
-    <nav class="navbar navbar-dark bg-dark">
-  <!-- Navbar content -->
-       </nav>
-
       <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
   <!-- Navbar content -->
           </nav>
@@ -27,18 +31,43 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-         <a class="nav-link active" href="{{ url('/index') }}">Home </a>
-             <a class="nav-link" href="{{ url('/mahasiswa') }}">mahasiswa</a>
-         <a class="nav-link" href="{{ url('/jurusan') }}">jurusan</a>
+    <a class="nav-link active" href="{{ url('/index') }}"><b>Home</b> </a>
+             <a class="nav-link" href="{{ url('/mahasiswa') }}"><b>Jurusan</b></a>
+         <a class="nav-link" href="{{ url('/jurusan') }}"><b>Mahasiswa</b></a>
      </div>
   </div>
 </div>
 </nav>
-    <div class="containe">
-        <div class="row">
+    <div class="container">
+        <div class="card">
+          <div class="card-body">
+          <div class="row">
             <div class="col-10">
-                <h1 class ="mt-3">Hello, world!</h1>
+                <h1 class ="mt-3">List Jurusan</h1>
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                     <th scope="col">No</th>
+                     <th scope="col">Jurusan</th>
+                     <th scope="col">Aksi</th>
+                    </tr>
+                    </thead>
+                    <tbody> 
+                    @foreach ($jurusan as $jrs) 
+                    <tr> 
+                      <th scope="row">{{ $loop->iteration }}</th>
+                      <td>{{ $jrs->nama_jurusan }}</td>
+                      <td>
+                        <a href="" class="badge badge-success">Edit</a>
+                        <a href="" class="badge badge-danger">Hapus</a>
+                      </td>
+                    </tr>
+                    @endforeach
+                    </tbody> 
+                </table>
              </div>
+        </div>
+          </div>
         </div>
     </div>
 
